@@ -1,6 +1,6 @@
 ---
   name: "send_email"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Send email via Mailgun HTTP API."
   enabled: true
   entry_point: "send_email.py"
