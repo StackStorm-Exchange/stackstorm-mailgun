@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.4.0
+
+- Bump requests version, remove httplib
+
 # 0.3.0
 
 - Updated action `runner_type` from `run-python` to `python-script`

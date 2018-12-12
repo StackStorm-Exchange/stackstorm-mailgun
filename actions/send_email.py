@@ -1,5 +1,3 @@
-import httplib
-
 import requests
 
 from st2common.runners.base_action import Action
@@ -34,7 +32,7 @@ class SendEmailAction(Action):
         api_url = SEND_EMAIL_API_URL % {'domain': domain}
         response = requests.post(api_url, auth=('api', api_key), data=data)
 
-        if response.status_code != httplib.OK:
+        if response.status_code != requests.codes.ok:  # pylint: disable=no-member
             msg = ('Failed to send message (status_code=%s): %s' %
                    (response.status_code, response.text))
             raise Exception(msg)
